@@ -48,7 +48,7 @@ export const NewsContextProvider: FC<INewsContextProvider> = ({ children }) => {
         setArticles(articles);
       }
     } catch (err) {
-      console.log(err);
+      alert(err);
     } finally {
       setIsLoading(false);
     }

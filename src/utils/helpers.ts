@@ -4,6 +4,7 @@ import {
 } from "../context/newsContext/news-context.types";
 
 export const shortenString = (str: string, maxLength: number) => {
+  if (!str) return;
   if (str.length <= maxLength) return str + "...";
   return str.slice(0, str.lastIndexOf(" ", maxLength)) + "...";
 };
