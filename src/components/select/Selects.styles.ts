@@ -1,16 +1,22 @@
 import { css } from "@emotion/react";
 
 export const selectStyles = {
-  label: css`
+  selectContainer: css`
     position: relative;
     margin-right: 16px;
+    display: flex;
+    flex-direction: column;
     &:last-of-type {
       margin-right: 0px;
+    }
+    label {
+      font-size: 12px;
     }
   `,
   select: css`
     position: relative;
     max-width: 200px;
+    min-width: 130px;
     -webkit-appearance: none;
     padding: 7px 40px 7px 12px;
     width: 100%;
@@ -40,8 +46,8 @@ export const selectStyles = {
     display: inline-block;
     padding: 3px;
     position: absolute;
-    top: 50%;
+    bottom: 16px;
     right: 8px;
-    transform: translateY(-50%) rotate(45deg);
+    transform: rotate(45deg);
   `,
 };

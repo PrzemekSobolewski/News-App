@@ -66,12 +66,14 @@ export const NewsList = () => {
           data={availableCountires}
           currentValue={country.value}
           onChange={handleCountryChange}
+          label="Kraj"
         />
         <Select
           id={FilterDataKeys.PAGE_SIZE}
           data={availablePageSizes}
           currentValue={pageSize.value}
           onChange={handlePageSizeChange}
+          label="Wyników na stronie"
         />
       </section>
       <section css={newsListStyles.newsContainer}>

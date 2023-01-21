@@ -6,11 +6,19 @@ type SelectProps = {
   id: string;
   data: FilterData[];
   currentValue: string;
+  label: string;
 };
 
-export const Select = ({ id, data, onChange, currentValue }: SelectProps) => {
+export const Select = ({
+  id,
+  data,
+  onChange,
+  currentValue,
+  label,
+}: SelectProps) => {
   return (
-    <label htmlFor={id} css={selectStyles.label}>
+    <div css={selectStyles.selectContainer}>
+      <label htmlFor={id}>{label}</label>
       <select
         id={id}
         css={selectStyles.select}
@@ -27,6 +35,6 @@ export const Select = ({ id, data, onChange, currentValue }: SelectProps) => {
         })}
       </select>
       <i css={selectStyles.arrowDown}></i>
-    </label>
+    </div>
   );
 };
